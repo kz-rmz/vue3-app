@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const PORT = process.env.PORT || 8000
 
 http.createServer( (request, response) => {
   console.log('request ', request.url);
@@ -47,9 +48,5 @@ http.createServer( (request, response) => {
       response.end(content, 'utf-8')
     }
   })
-  let port = process.env.PORT;
-  if (port == null || port == "") {
-    port = 8000;
-  }
-}).listen(port);
+}).listen(PORT);
 console.log(`Server running at localhost`);
