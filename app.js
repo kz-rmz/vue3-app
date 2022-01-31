@@ -6,6 +6,14 @@ const app = Vue.createApp({
             changeImage(e) {
                 let img = e.target;
                 if (img.src === 'http://localhost:3000/like.png') {
+                    img.src = 'http://localhost:3000/like-2.png';
+                } else {
+                    img.src = 'http://localhost:3000/like.png';
+                }
+            },
+            btnDownHandler(e){
+                let img = e.target;
+                if (img.src === 'http://localhost:3000/like.png') {
                     img.src = 'http://localhost:3000/like-3.png';
                 } else {
                     img.src = 'http://localhost:3000/like.png';
@@ -19,9 +27,13 @@ const app = Vue.createApp({
             greeting: 'Start your journey here! ;)',
             mainImage(){ return 'like-2.png'},
             likes: 0,
-            mouseDownEvent($event) {
+            clickOnImageHandler($event) {
                 return [this.likes++, this.changeImage($event)]
-            }
+            },
+            mouseBtnDownOnImageHandler(e) {
+                let img = e.target; 
+                img.src = 'like-2.png'
+            }, 
         }
     }
 })

@@ -14,7 +14,8 @@
         <h1>{{ title() }}</h1>
         <p>{{ greeting }}</p>
         <button 
-            @click='mouseDownEvent($event)' 
+            @click='clickOnImageHandler($event)' 
+            @mousedown='mouseBtnDownOnImageHandler($event)'
             >
             <img 
             src= "like.png"
