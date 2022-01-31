@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    
+    <div id="app" class='theme__font'>
+        <h1>{{ title() }}</h1>
+        <p>{{ greeting }}</p>
+        <button 
+            @click='mouseDownEvent($event)' 
+            >
+            <img 
+            src= "like.png"
+            alt="like"
+            srcset=""
+            class="likeImage"
+            >
+            <span >Likes: {{ likes }}</span>
+        </button>
+    </div>
+    <script src="app.js" type='module'></script>
+</body>
+
+<!--Icon made by Freepik perfect from www.flaticon.com  !-->
+</html>
