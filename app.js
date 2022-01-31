@@ -19,8 +19,11 @@ const app = Vue.createApp({
                     img.src = 'http://localhost:3000/like.png';
                 }
             },
-            title: ()=>{
+            title: (rtl = true)=>{
                 let arr = ['H', 'e', 'l', 'l', 'o', ',', 'V','u', 'e'];
+                if(!rtl){
+                    return arr.reverse().join('').toString(); 
+                }
 
                 return arr.join('').toString();
             },
@@ -32,7 +35,7 @@ const app = Vue.createApp({
             },
             mouseBtnDownOnImageHandler(e) {
                 let img = e.target; 
-                img.src = 'like-2.png'
+                img.src = 'like-2.png';
             }, 
         }
     }
