@@ -5,18 +5,18 @@ const app = Vue.createApp({
         return {
             changeImage(e) {
                 let img = e.target;
-                if (img.src === 'http://localhost:3000/like.png') {
-                    img.src = 'http://localhost:3000/like-2.png';
+                if (img.src === `${img.src}/like.png)`) {
+                    img.src = `${img.src}/like-2.png)`;
                 } else {
-                    img.src = 'http://localhost:3000/like.png';
+                    img.src = `${img.src}/like.png)`;
                 }
             },
             btnDownHandler(e){
                 let img = e.target;
-                if (img.src === 'http://localhost:3000/like.png') {
-                    img.src = 'http://localhost:3000/like-3.png';
+                if (img.src === `${img.src}/like.png)`) {
+                    img.src = `${img.src}/like-3.png)`
                 } else {
-                    img.src = 'http://localhost:3000/like.png';
+                    img.src = `${img.src}/like.png)`;
                 }
             },
             title: (rtl = true)=>{
