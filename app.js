@@ -16,7 +16,7 @@ const app = Vue.createApp({
                 if (img.src === `(__dirname)/like.png`) {
                     img.src = `${img.src}/like-3.png)`
                 } else {
-                    img.src = `${img.src}/like.png)`;
+                    img.src = `(__dirname)/like.png`
                 }
             },
             title: (rtl = true)=>{
