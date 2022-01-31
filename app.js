@@ -13,6 +13,7 @@ const app = Vue.createApp({
             },
             btnDownHandler(e){
                 let img = e.target;
+                console.log((__dirname))
                 if (img.src === `(__dirname)/like.png`) {
                     img.src = `${img.src}/like-3.png)`
                 } else {
