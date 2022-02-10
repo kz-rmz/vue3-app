@@ -2,12 +2,12 @@
   "name": "vue3-nodejs-sandbox",
   "version": "0.0.1",
   "description": "Testing repository for learning purposes",
-  "main": "start.js",
+  "main": "main.js",
   "engines": {
     "node": "16.x"
   },
   "scripts": {
-    "start": "node start.js",
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/kz-rmz/vue3-app/issues"
   },
-  "homepage": "https://github.com/kz-rmz/vue3-app#readme"
+  "homepage": "https://github.com/kz-rmz/vue3-app#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }

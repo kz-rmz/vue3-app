@@ -1,10 +1,20 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8000;
+const mysql =  require('mysql');
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'ramazan777',
+  database: 'testdb'
+})
+
 
 http.createServer( (request, response) => {
   console.log('request ', request.url);
+  // cosnt app = Vue.Vue
 
   let filePath = '.' + request.url;
   if (filePath == './') {
@@ -49,4 +59,4 @@ http.createServer( (request, response) => {
     }
   })
 }).listen(PORT);
-console.log(`Server running at localhost`);
+console.log(`Server running at localhost: ${PORT}`);

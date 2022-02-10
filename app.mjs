@@ -1,24 +1,22 @@
-// import changeImage from './components/changeImage';
+import changeImage from './components/changeImage';
 
 const app = Vue.createApp({
     data(){
         return {
             changeImage(e) {
                 let img = e.target;
-                console.log(e.target.baseURI)
-                if (img.src === `${e.target.baseURI}like.png)`) {
-                    img.src = `${e.target.baseURI}like-2.png`;
+                if (img.src === `${e.target.baseURI}/assets/like.png)`) {
+                    img.src = `${e.target.baseURI}/assets/like-2.png`;
                 } else {
-                    img.src = `${e.target.baseURI}like.png`;
+                    img.src = `${e.target.baseURI}/assets/like.png`;
                 }
             },
             btnDownHandler(e){
                 let img = e.target;
-                console.log(img)
-                if (img.src === `${e.target.baseURI}like.png`) {
-                    img.src = `${e.target.baseURI}like-3.png`
+                if (img.src === `${e.target.baseURI}/assets/like.png`) {
+                    img.src = `${e.target.baseURI}/assets/like-3.png`
                 } else {
-                    img.src = `${e.target.baseURI}like.png`
+                    img.src = `${e.target.baseURI}/assets/like.png`
                 }
             },
             title: (rtl = true)=>{
